@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benjamin Counter</title>
+<meta name="description" content="Central page for the work of Benjamin Counter: art portfolio, Windows XP edition, 3D gallery and commission status.">
+<link rel="icon" type="image/png" href="resources/logo_white_seo.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Benjamin Counter">
+<meta property="og:description" content="Art portfolio, Windows XP edition, 3D gallery and commission status.">
+<meta property="og:image" content="https://bryancontador.github.io/Central/resources/logo_white_seo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bryancontador.github.io/Central/resources/logo_white_seo.png">
+
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="logo logo-dark" src="resources/logo_v2.png" alt="Benjamin Counter">
+    <img class="logo logo-light" src="resources/logo.png" alt="Benjamin Counter">
+  </header>
+
+  <main>
+    <!-- COMMISSIONS
+         To open them later: change the status text to "Open", add the class "solid",
+         update the paragraph, and replace the hidden .btn rule in style.css (display:none)
+         with a link to your queue form. -->
+    <section class="commissions" aria-labelledby="comm-title">
+      <div>
+        <h2 id="comm-title">Commissions</h2>
+        <p>Not available right now.</p>
+      </div>
+      <span class="status">Closed</span>
+    </section>
+
+    <section class="cards" aria-label="Portfolio editions">
+
+      <a class="card" href="https://bryancontador.github.io/index.html">
+        <img src="resources/drawing.jpg" alt="Illustration from the art portfolio" loading="lazy">
+        <div class="info">
+          <span class="status solid">Live</span>
+          <h3>Art Portfolio</h3>
+          <p>Most of the work I've done over the years, including original characters and tributes to other artists.</p>
+          <span class="go">Open portfolio</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://bryancontador.github.io/winxp-portfolio">
+        <img src="resources/screenshot_xp.png" alt="Screenshot of the Windows XP style portfolio" loading="lazy">
+        <div class="info">
+          <span class="status solid">Live</span>
+          <h3>Windows XP Edition</h3>
+          <p>The same portfolio, re-skinned in the style of Windows XP.</p>
+          <span class="go">Open XP edition</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://github.com/BryanContador/3D-gallery-view">
+        <img src="resources/screenshot_3d.png" alt="Screenshot of the 3D gallery portfolio" loading="lazy">
+        <div class="info">
+          <span class="status">In progress</span>
+          <h3>3D Gallery</h3>
+          <p>Another re-skin of the portfolio, this time in 3D. It's unreleased and not deployed yet, but it's playable: the source is public, and you can run it with a live server in VS Code.</p>
+          <span class="go">View source on GitHub</span>
+        </div>
+      </a>
+
+    </section>
+  </main>
+</div>
+
+<button class="toggle" id="theme-toggle" type="button"></button>
+
+</body>
+</html>
