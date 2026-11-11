@@ -50,6 +50,20 @@ header { padding: 3rem 0 2rem; display: flex; justify-content: center; }
 :root[data-theme="light"] .logo-dark { display: none; }
 :root[data-theme="light"] .logo-light { display: block; }
 
+/* E-mail (above commissions) */
+.email {
+  font-family: "Special Gothic Expanded One", system-ui, sans-serif;
+  font-weight: 400; font-style: normal;
+  font-size: 1.6rem; text-align: center;
+  margin-bottom: 1rem;
+}
+.email a { color: var(--red-text); text-underline-offset: 3px; }
+.email a:hover { text-decoration-thickness: 2px; }
+.email a:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+
+/* Bio (below cards) */
+.bio { margin: 2.5rem auto 0; font-size: 1.1rem; color: var(--muted); display: grid; gap: .7rem; max-width: 100ch; text-align: left center; }
+
 /* Commissions banner */
 .commissions {
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
