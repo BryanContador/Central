@@ -32,15 +32,23 @@
     <p class="email">E-mail: <a href="mailto:bryan.virtuales@gmail.com">bryan.virtuales@gmail.com</a></p>
     
     <!-- COMMISSIONS
-         To open them later: change the status text to "Open", add the class "solid",
-         update the paragraph, and replace the hidden .btn rule in style.css (display:none)
-         with a link to your queue form. -->
-    <section class="commissions" aria-labelledby="comm-title">
+         To open them: add the class "open" to the <body> tag.
+         To close them: remove it. That's the only change.
+         Opening turns everything red on the page toxic green.
+         The button links to e-mail for now; later change its href to your queue form. -->
+         
+    <section class="commissions" aria-labelledby="comm-title">  
+
+      <!--<body class="open">-->
+
       <div>
         <h2 id="comm-title">Commissions</h2>
-        <p>Not available right now.</p>
+        <p class="closed-msg">Not available right now.</p>
+        <p class="open-msg">Commissions are open! Send me an email to request one.</p>
+        <a class="btn" href="mailto:bryan.virtuales@gmail.com">Email me</a>
       </div>
       <span class="status">Closed</span>
+      <span class="status solid">Open</span>
     </section>
 
     <section class="cards" aria-label="Portfolio editions">

@@ -77,7 +77,37 @@ header { padding: 3rem 0 2rem; display: flex; justify-content: center; }
 .commissions h2 { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 1.6rem; line-height: 1.1; }
 .commissions p { color: var(--muted); font-size: .95rem; margin-top: .2rem; }
 .commissions .status { margin-left: auto; }
-.commissions a.btn { display: none; } /* shown only when open, see comment in index.html */
+.commissions a.btn { display: none; } /* shown only when open (body.open) */
+
+/* Closed by default: hide the open text and the Open tag */
+.commissions .open-msg,
+.commissions .status.solid { display: none; }
+
+/* Open: everything red on the page turns toxic green */
+body.open { --red: #39ff14; --red-text: #39ff14; }
+:root[data-theme="light"] body.open { --red-text: #189a00; } /* darker green text on light mode */
+
+/* Open: swap the texts and show the button */
+body.open .commissions .closed-msg,
+body.open .commissions .status:not(.solid) { display: none; }
+body.open .commissions .open-msg { display: block; }
+body.open .commissions .status.solid { display: inline-block; }
+body.open .commissions a.btn {
+  display: inline-block;
+  margin-top: .6rem;
+  padding: .55rem 1.1rem;
+  background: var(--red);
+  text-decoration: none;
+  font-weight: 600;
+}
+body.open .commissions a.btn:hover { filter: brightness(1.1); }
+
+/* Dark text on the neon green, white wouldn't read */
+body.open .status.solid,
+body.open .commissions a.btn { color: #0d0d0f; }
+
+body.open .toggle { color: #000000; }
+
 
 /* Status tags */
 .status {
