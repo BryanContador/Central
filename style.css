@@ -168,3 +168,62 @@ body.open .commissions a.btn { color: #0d0d0f; }
   * { transition: none !important; }
   .card:hover { transform: none; }
 }
+
+/* Mobile hardening */
+html { -webkit-text-size-adjust: 100%; }
+img { max-width: 100%; }
+
+/* Fixes invalid original value: text-align: left center; */
+.bio { text-align: left; }
+
+/* Long email must not overflow on narrow screens */
+.email {
+  font-size: clamp(1rem, 5vw, 1.6rem);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.email a { overflow-wrap: anywhere; }
+
+@media (max-width: 680px) {
+  body {
+    padding: 0 1rem calc(5.5rem + env(safe-area-inset-bottom)) 1rem;
+  }
+
+  header { padding: 2rem 0 1.5rem; }
+  .logo { height: 64px; max-width: 100%; }
+
+  .email { margin-bottom: .75rem; }
+
+  .commissions {
+    padding: .9rem 1rem;
+    border-left-width: 6px;
+    gap: .75rem;
+  }
+  .commissions h2 { font-size: 1.35rem; }
+  .commissions .status { margin-left: 0; }
+
+  .card .info { padding: 1rem; gap: .6rem; }
+  .card h3 { font-size: 1.5rem; }
+  .card p { font-size: .95rem; }
+
+  .section-title { font-size: 1.4rem; }
+  .bio { font-size: 1rem; }
+
+  .toggle {
+    width: 2.75rem;
+    height: 2.75rem;
+    left: max(1rem, env(safe-area-inset-left));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 420px) {
+  .email { font-size: 1.05rem; }
+  .logo { height: 56px; }
+
+  .commissions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .commissions .status { margin-top: .25rem; }
+}
