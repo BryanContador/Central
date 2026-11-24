@@ -105,7 +105,7 @@ body.open .commissions a.btn:hover { filter: brightness(1.1); }
 /* Dark text on the neon green, white wouldn't read */
 body.open .status.solid,
 body.open .commissions a.btn { color: #0d0d0f; }
-
+body.open .toggle { color: #000000; }
 /* Status tags */
 .status {
   font-family: var(--display); font-style: italic;
